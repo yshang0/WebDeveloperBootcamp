@@ -1,0 +1,55 @@
+Photo showing website
+======================
+=========================================================================================================
+
+# built with Node.js  Express.js  DOM Munipulation   AngularJs
+
+		DOM Munipulation : The Document Object Model is a platform - and language- neutral interface that
+				   willallow programs and scripts to dynamically access and update the content, structrue
+				   and style of documents
+		DOM events
+		jQuery is a framework of JavaScript
+
+		Node.js lets developers use JavaScript to write Command line 
+	  		tools and for server-side script-running scripts server side
+	  		to produce dynamic web page content before the page is sent to 
+	  		the user's web browser.
+		Node.js and express.js in the level of abstraction: 
+			Node.js is a platform for building server-side event-driven i/o application using javascript.
+			Express.js is a framework based on node.js for building web-application using principles
+			and approaches of node.js
+
+# MongoDB: database
+   		what is a database
+   		   /a collection of information/data
+   		   /has an interface
+   		NoSQL non relational
+
+# Implemented RESTful API with Mongoose and Express.js
+		RESTful routes-- a mapping between HTTP routes and CRUD 
+   
+# Semantic Ui
+
+# Authentication 
+		passport
+  		passport local (package)
+  		passport local mongoose (this package make faster and simpler) 
+
+# create header and footer partials with adding in bootstrapCDN and stylesheet.css
+
+
+Chat
+====================
+=============================================================================================================
+Chat 聊天小程序
+
+ChatServer        ChatClient
+
+
+Server端占据端口号5888，接收多个Client的连接，为每一个连接建立一个Socket来处理它们之间的通信。
+Server将收到的所有Client发过来的信息，都发给所有的Client。
+要想让每一个Client都收到各自的信息不干扰，那么要用多线程去处理每个Client。
+读(readUTF)要循环一直读。
+
+Client端就负责发送自己的消息和GUI显示。
+

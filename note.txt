@@ -1,0 +1,223 @@
+add landing page,
+add campgrounds page that lists all campgrounds
+
+each campground has name and image
+
+using ejs, node.js
+
+* layout:
+
+create header and footer partials
+add in bootstrapCDN // stylesheet.css
+
+*create new campgrounds
+  setup new campground POST route
+  add in body-parser // To handle HTTP POST request in Express.js version 4 and above, 
+  					// you need to install middleware module called body-parser.
+
+					//body-parser extract the entire body portion of an incoming request stream and exposes it on req.body.
+  function: can input name and link to add picture into campgrounds
+
+
+  setup route to show form
+  add basic unstyled form
+
+  *style the campgrounds page
+   add a better header/title
+   make campgrounds display in a grid
+
+  *style the navbar and form
+   add a navbar to all templates
+   style the new campground form
+
+   ***database
+   		what is a database
+   		   /a collection of information/data
+   		   /has an interface
+   		SQL relational vs. NoSQL non relational
+
+
+   		select * FROM users
+   		Insert hkjhlj into
+   		db.dogs.find()
+
+
+   		MongoDB is a database
+   		why use MongoDB
+
+   		first mongo commands
+   			help
+   			use demo
+   			show dbs
+   			db.dogs.insert()
+   			db.dogs.find()
+   			db.dogs.find({name: "rusty"})
+   			db.dogs.update({mark}, {update})
+   			db.dogs.update({name: "r"}, {name: "Tter, isCure: true"})
+   			remove:
+   				db.dogs.remove({breed: "lab"})
+
+   ***Mongoose
+   		install and configure mongoose
+   		setup campground model Schema
+   		use campground model inside of our toures!
+   ***show page
+   		review the RESTful routes we've seen so far
+   			name      url       		verb    desc.
+   			===========================================================
+   			INDEX     /dogs      		GET		display a list of all dog
+   			NEW       /dogs/new  		GET		displays form to make a new dog
+   			CREATE    /dogs      		POST	add new dog to DB
+   			SHOW      /dogs/:id  		GET		shows info about one dog
+   			Edit	  /dogs/:id/edit    GET		show edit form for one dog
+   			Update 	  /dogs/:id         PUT     Update a particular dog, then redirect somewhere
+   			Destroy   /dogs/:id         DELETE  Delete a particular dog, then redirect somewhere
+
+   		add description to our campground model
+   		show db.collection.drop()
+
+   		add a show route/template
+
+   	***REST -- a mapping between HTTP routes and CRUD 
+   		RESTful routes
+   			(create, 
+   			 read, /allBlogs
+   			 update, /update
+   			 destroy)
+
+   	渲染内容用res.render, 将会根据views中的模板文件进行渲染
+   	如果想写一个快速测试页，可以使用res.send()
+
+
+
+   	***Blog Index
+   			Setup the blog app
+   			create the blog model
+   			add index route and template
+
+   	***Basic layout
+   			add header and footer partials
+   			include semantic Ui    cdn
+   			add simple nav
+
+   	*** new format for sending data to the server from a form
+
+   		put the C in CRUD
+   			add new route
+   			add new template
+   			add create route
+   			add create template
+   	***SHOW
+
+   			add show route
+   			add show template
+   			add links to show page
+   			style show template
+   	***Edit/Updated
+   	        add edit route
+   	        add edit form
+   	        add update route
+   	        add update form
+   	        add method-override
+   	***DELETE
+
+  run into an error in terminal like:
+  			MongoError: Unknown modifier: $ pushAll
+  	
+
+  	*** Associations
+  			discuss one:one, one:many many:many reslationship
+
+  			embedding Data
+  				user
+  				post
+
+  			referencing data
+
+  			Module.exports
+  				user
+  				post
+
+  	*** Refactor Mongoose Code
+  			create a models directory
+  			use module.exports
+  			require everything correctly
+  	*** add seeds file
+  			add a seeds.js file   database
+  			run the seeds file every time the server starts
+
+  		Add commnet : NEW     campgrounds/:id/comments/new    GET
+  					  CREATW  campgrounds/:id/comments		  POST
+
+  			class="btn btn-success"
+
+  	***Intro to Authentication
+  		what tools are we using     passportjs
+  			passport
+  			passport local (package)
+  			passport local mongoose (this package make faster and simpler) 
+  		walk through auth flow
+  		discuss sessions
+  			express session (one kind of package)
+
+  		Setup folder structure
+  		install needed packages
+  		add root route and template
+  		add secret route and template
+
+  		** Auth CodeAlong 
+  			create user model
+  			configure passport
+
+  			add register routes
+  			add register form
+
+  	***   Auth pt.1 - Add User Model
+  			Install all packages needed for auth
+  			define user model
+  		  Auth pt.2 - Register
+  		  	configure passport   require,express-session
+  		  	add register routes
+  		  	add register template
+  		  Auth pt. 3 - login
+  		  	add login routes
+  		    add login template
+  		  Auth Pt.4 - Logout/NavBar
+  		  	add logout route
+  		  	prevent user from adding a comment if not signed in // add isLoggedIn in app.get
+  		  	add links to navbar // see login and signup when you are not login
+  		  Auth Pt .5 - show/hide links 	
+  		  	show/hide auth links correctly
+
+  	***  Refactor the Routes
+  			use express route to reoragnize all routes
+
+  		  Users + comments   //check if login before add new comments
+  		  	associate users and comments
+  		  	save author's name to a comment automatically
+
+  		  users + campgrounds   //check if login before
+  		  	prevent an unauthenticated user from creating a campgrounds
+  		  	save username + id to newly created campground
+  	***  Editng campgrounds
+  	     add method-override
+  	     add edit route for campgrounds
+  	     add link to edit page
+  	     add update route
+  	     fix $set problem
+
+  	*** Authorization Part 2: comments
+  		user can only edit his/her comments
+  		user can only delete his/her comments
+  		hide/show edit and delete buttons
+  		refactor middleware 
+
+
+
+
+
+
+
+
+
+
